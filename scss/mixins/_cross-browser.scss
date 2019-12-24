@@ -1,11 +1,9 @@
 // ADDS A BROWSER PREFIX TO THE PROPERTY
-@mixin cross-browser-styles($property: null, $value: null) {
+@mixin cross-browser-styles($property: null, $value: null, $prefixes: webkit moz ms o) {
     @if (($property != null) and ($value != null)) {  
-      -webkit-#{$property}: #{$value};
-      -khtml-#{$property}: #{$value};
-      -moz-#{$property}: #{$value};
-      -ms-#{$property}: #{$value};
-      -o-#{$property}: #{$value};
+      @each $prefix in $prefixes {
+        -#{$prefix}-#{$property}: #{$value};
+      }
       #{$property}: #{$value};
     }
   }

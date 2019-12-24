@@ -3,6 +3,7 @@
 @import './variables/variables';
 @import './mixins/import-mixins';
 @import './utilities/import-utilities';
+// @import './placeholders/import-placeholders';
 
 
 /* Custom Styles Starts Here */
@@ -22,3 +23,22 @@ section {
 .container{
     @include bg-image-styles($bgImage: '../../../assets/images/roka-logo-main.svg', $bgSize: cover, $bgPosition: center center, $bgRepeat: no-repeat);
 }
+
+%toolbelt {
+    box-sizing: border-box;
+    border-top: 1px rgba(#000, .12) solid;
+    padding: 16px 0;
+    width: 100%;
+
+    &:hover { border: 2px rgba(#000, .5) solid; }
+}
+
+.action-buttons {
+    @extend %toolbelt;
+    color: #4285f4;
+  }
+  
+  .reset-buttons {
+    @extend %toolbelt;
+    color: #cddc39;
+  }

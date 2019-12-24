@@ -171,7 +171,6 @@ a.text-dark:hover, a.text-dark:focus {
 /* Custom Styles Starts Here */
 div {
   -webkit-transform: translateY(-50%);
-  -khtml-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   -o-transform: translateY(-50%);
@@ -195,6 +194,24 @@ section {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+}
+
+.reset-buttons, .action-buttons {
+  box-sizing: border-box;
+  border-top: 1px rgba(0, 0, 0, 0.12) solid;
+  padding: 16px 0;
+  width: 100%;
+}
+.reset-buttons:hover, .action-buttons:hover {
+  border: 2px rgba(0, 0, 0, 0.5) solid;
+}
+
+.action-buttons {
+  color: #4285f4;
+}
+
+.reset-buttons {
+  color: #cddc39;
 }
 
 /*# sourceMappingURL=styles.css.map */
