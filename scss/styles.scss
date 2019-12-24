@@ -1,0 +1,24 @@
+//SASS Practice
+@import './functions/import-functions';
+@import './variables/variables';
+@import './mixins/import-mixins';
+@import './utilities/import-utilities';
+
+
+/* Custom Styles Starts Here */
+
+div {
+    @include cross-browser-styles(transform, translateY(-50%));
+}
+
+span {
+    @include element-display($displayEle: flex, $justifyContent: center, $alignItems: center);
+}
+
+section {
+    @include font-styling($fontFamily: Roboto, $size: 16px, $color: var(--grey-blue) !important);
+}
+
+.container{
+    @include bg-image-styles($bgImage: '../../../assets/images/roka-logo-main.svg', $bgSize: cover, $bgPosition: center center, $bgRepeat: no-repeat);
+}

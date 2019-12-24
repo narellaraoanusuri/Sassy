@@ -1,0 +1,35 @@
+@mixin element-display($displayEle: null, $justifyContent: null, $alignItems: null, $alignEle: null) {
+    @if ($displayEle != null) {  
+        display: $displayEle;
+    }
+    @if ($justifyContent != null) {  
+        justify-content: $justifyContent;
+    }
+    @if ($alignItems != null) {  
+        align-items: $alignItems;
+    }
+    @if ($alignEle != null) {  
+        vertical-align: $alignEle;
+    }
+}
+
+@mixin element-position($positionEle: null, $topEle: null, $rightEle: null, $bottomEle: null, $leftEle: null, $translateEle: null) {
+    @if($positionEle != null){
+        position: $positionEle;
+    }
+    @if ($topEle != null) {
+        top: $topEle;
+    }
+    @if ($rightEle != null) {
+        right: $rightEle;
+    }
+    @if ($bottomEle != null) {
+        bottom: $bottomEle;
+    }
+    @if ($leftEle != null) {
+        left: $leftEle;
+    }
+    @if ($translateEle != null) {
+        @include cross-browser-styles($property: transform, $value: $translateEle)
+    }
+}

@@ -1,0 +1,70 @@
+@mixin font-face($fontName: null, $fontPath: null) {
+	@font-face {
+    @if (($fontName != null) and ($fontPath != null)) {  
+      font-family: '#{$fontName}';
+      src: url('#{$fontPath}.eot');
+      src: url('#{$fontPath}.eot?#iefix') format('embedded-opentype'),
+          url('#{$fontPath}.woff') format('woff'),
+          url('#{$fontPath}.ttf') format('truetype'),
+          url('#{$fontPath}.svg') format('svg');
+    }
+	}
+}
+
+@include font-face(Montserrat, '../../../fonts/Montserrat/Montserrat');
+@include font-face(Roboto, '../../../fonts/Roboto/Roboto');
+
+// %common-font-styles{
+//   font-family: Montserrat;
+//   font-weight: normal;
+//   font-style: normal;
+//   font-stretch: normal;
+//   line-height: normal;
+//   letter-spacing: normal;
+// }
+// *{
+//   font-weight: normal;
+//   font-style: normal;
+//   font-stretch: normal;
+//   line-height: normal;
+//   letter-spacing: normal;
+// }
+@mixin font-styling($fontFamily: null, $size: null, $weight: null, $fontStyle:null, $fontStretch:null,  $lineHeight:null, $letterSpacing:null, $textAlign: null, $color: null) {
+  // @extend %common-font-styles;
+
+  @if ($fontFamily != null) {   
+    font-family: $fontFamily;
+  }
+
+  @if ($size != null) {
+    font-size: $size; 
+  }
+
+  @if ($weight != null) {
+    font-weight: $weight;
+  }
+
+  @if ($fontStyle != null) {
+    font-style: $fontStyle;
+  }
+
+  @if ($fontStretch != null) {
+    font-stretch: $fontStretch;
+  }
+
+  @if ($lineHeight != null) {
+    line-height: $lineHeight;
+  }
+
+  @if ($letterSpacing != null) {
+    letter-spacing: $letterSpacing;
+  }
+
+  @if ($textAlign != null) {
+    text-align: $textAlign;
+  }
+
+  @if ($color != null) {
+    color: $color;
+  }
+}

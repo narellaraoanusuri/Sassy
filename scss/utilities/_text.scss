@@ -1,0 +1,7 @@
+.text-white { color: $white !important; }
+
+@each $color, $value in $theme-colors {
+  @include text-variant(".text-#{$color}", $value);
+}
+
+.text-muted { color: $text-muted !important; }

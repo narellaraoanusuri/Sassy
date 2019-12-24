@@ -1,0 +1,23 @@
+@mixin bg-image-styles($bgImage: null, $bgSize: null, $bgPosition: null, $bgClip: null, $bgOrigin: null, $bgAttachment: null, $bgRepeat: null) {
+    @if ($bgImage != null) {  
+        background-image: url($bgImage);
+    }
+    @if ($bgSize != null) {  
+        background-size: $bgSize;
+    }
+    @if ($bgPosition != null) {  
+        background-position: $bgPosition;
+    }
+    @if ($bgClip != null) {  
+        background-clip: $bgClip;
+    }
+    @if ($bgOrigin != null) {  
+        background-origin: $bgOrigin;
+    }
+    @if ($bgAttachment != null) {  
+        background-attachment: $bgAttachment;
+    }
+    @if ($bgRepeat != null) {  
+        background-repeat: $bgRepeat;
+    }
+}

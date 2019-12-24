@@ -1,0 +1,7 @@
+@function pow($x, $y) {
+    $result: 1;
+    @for $i from 1 through $y {
+        $result: $result * i;
+    }
+    @return $result;
+}
